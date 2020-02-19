@@ -33,7 +33,27 @@ import Foundation
  */
 // Begin your work here...
 
+struct circle {
+    //Mark: Properties
+    var radius: Double
+    //Turn the imput into the final answer
+    var area: Double {
+        return Double.pi * pow(radius, 2)
+    }
+    var perimeter: Double {
+        return Double.pi * 2 * radius
+    }
+    
+    //Compound property to description
+    var areaDescription: String {
+        return "The area of the circle is \(area) square units. The perimeter of the circle is \(perimeter) units"
+    }
+}
 
+//Create circle instance
+let someCircle = circle(radius: 6.0)
+
+print (someCircle.areaDescription)
 
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
