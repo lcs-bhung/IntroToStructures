@@ -108,7 +108,27 @@ print (someSphere.areaDescription)
 
 
 
+struct cone {
+    //Mark: Properties
+    var radius: Double
+    var height: Double
+    //Area of the cone
+    var area: Double{
+        return 1/3 * pow(radius, 2) * Double.pi * height
+    }
+    //Base of the cone
+    var base: Double {
+        return 1 * pow(radius, 2)
+    }
+    //Compound property into string
+    var areaDescription: String {
+        "The area of the cone is \(area) square units, the base area of the cone is \(base) square units"
+    }
+}
 
+//Create the cone instance
+var someCone = cone(radius: 12.2, height: 15.5)
+print (someCone.areaDescription)
 
 
 
